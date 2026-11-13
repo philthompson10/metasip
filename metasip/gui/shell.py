@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: BSD-2-Clause
 
-# Copyright (c) 2024 Phil Thompson <phil@riverbankcomputing.com>
+# Copyright (c) 2026 Phil Thompson <phil@riverbankcomputing.com>
 
 
 from enum import auto, Enum
@@ -9,7 +9,7 @@ from PyQt6.QtCore import QSettings, Qt
 from PyQt6.QtWidgets import (QDockWidget, QMainWindow, QMenuBar, QMessageBox,
         QWhatsThis)
 
-from .._version import version
+from ..version import METASIP_VERSION_STR
 
 from .shell_tool import ShellTool, ShellToolLocation
 
@@ -279,7 +279,7 @@ class Shell:
         """ Tell the user about the application. """
 
         QMessageBox.about(self.widget, "About msip",
-f"""This is msip v{version}, part of MetaSIP.
+f"""This is msip v{METASIP_VERSION_STR}, part of MetaSIP.
 
 msip is a tool for creating .sip files from C/C++ header files.
 """)

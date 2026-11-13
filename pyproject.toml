@@ -1,20 +1,17 @@
 # The project configuration for metasip.
 
 [build-system]
-requires = ["setuptools>=64", "setuptools_scm>=8"]
+requires = ["setuptools>=80", "setuptools_scm[simple]>=9.2"]
 build-backend = "setuptools.build_meta"
-
-[tool.setuptools_scm]
-version_file = "metasip/_version.py"
 
 [project]
 name = "metasip"
 description = "GUI Development Tool for SIP"
 readme = "README.md"
 urls.homepage = "https://github.com/Python-SIP/metasip"
-requires-python = ">=3.8"
-license = {file = "LICENSE"}
-classifiers = ["License :: OSI Approved :: BSD License"]
+requires-python = ">=3.11"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
 dynamic = ["version"]
 
 [[project.authors]]

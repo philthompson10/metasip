@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: BSD-2-Clause
 
-# Copyright (c) 2024 Phil Thompson <phil@riverbankcomputing.com>
+# Copyright (c) 2026 Phil Thompson <phil@riverbankcomputing.com>
 
 
 import argparse
@@ -10,7 +10,7 @@ import os
 from .exceptions import UserException
 from .models import Project
 from .project_io import generate_sip_files, load_project
-from ._version import version
+from .version import METASIP_VERSION_STR
 
 
 def main():
@@ -19,7 +19,8 @@ def main():
     # Parse the command line.
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-V', '--version', action='version', version=version)
+    parser.add_argument('-V', '--version', action='version',
+            version=METASIP_VERSION_STR)
     parser.add_argument('project',
             help="the project to generate .sip files from",
             nargs='?')
